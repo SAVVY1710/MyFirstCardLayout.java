@@ -34,10 +34,12 @@ public class MyFirstCardLayout {
             runIt();
             counter = 0;
         }
-        public void paintComponent(Graphics g){
+        public void paintComponent(Graphics g)
+        {
             super.paintComponent (g);
         }
-        public void runIt(){
+        public void runIt()
+        {
             JPanel panel = new JPanel();
             JPanel panel1 = new JPanel(new BorderLayout());
             JPanel panel2 = new JPanel(new BorderLayout());
@@ -115,6 +117,64 @@ public class MyFirstCardLayout {
             JButton btn43 = new JButton("Display Card 4");
             JButton next3 = new JButton("Next");
             JButton previous3 = new JButton("Previous");
+
+            CardLayout cardLayout = new CardLayout();
+            panel.setLayout(cardLayout);
+            btnpanel1.add(previous);
+            btnpanel1.add(next);
+            btnpanel2.add(btn1);
+            btnpanel2.add(btn2);
+            btnpanel2.add(btn3);
+            btnpanel2.add(btn4);
+
+            btnpanel3.add(previous1);
+            btnpanel3.add(next1);
+            btnpanel4.add(btn11);
+            btnpanel4.add(btn21);
+            btnpanel4.add(btn31);
+            btnpanel4.add(btn41);
+
+            btnpanel5.add(previous2);
+            btnpanel5.add(next2);
+            btnpanel6.add(btn12);
+            btnpanel6.add(btn22);
+            btnpanel6.add(btn32);
+            btnpanel6.add(btn42);
+
+            btnpanel7.add(previous3);
+            btnpanel7.add(next3);
+            btnpanel8.add(btn13);
+            btnpanel8.add(btn23);
+            btnpanel8.add(btn33);
+            btnpanel8.add(btn43);
+
+            btnPanel.setPreferredSize(new Dimension(600, 100));
+            btnPanel2.setPreferredSize(new Dimension(600, 100));
+            btnPanel3.setPreferredSize(new Dimension(600, 100));
+            btnPanel4.setPreferredSize(new Dimension(600, 100));
+
+            JPanel blanc1 = new JPanel();
+            JPanel blank2 = new JPanel(new FlowLayout(FlowLayout.CENTER));
+            JPanel blank3 = new JPanel();
+            blank2.setPreferredSize(new Dimension(50, 300));
+            blanc1.setPreferredSize(new Dimension(600, 150));
+            blank3.setPreferredSize(new Dimension(50, 300));
+
+            JPanel blanc2 = new JPanel();
+            JPanel blank4 = new JPanel(new FlowLayout(FlowLayout.CENTER));
+            JPanel blank5 = new JPanel();
+            blank4.setPreferredSize(new Dimension(50, 300));
+            blanc2.setPreferredSize(new Dimension(600, 150));
+            blank5.setPreferredSize(new Dimension(50, 300));
+
+            JPanel blanc3 = new JPanel();
+            JPanel blank6 = new JPanel(new FlowLayout(FlowLayout.CENTER));
+            JPanel blank7 = new JPanel();
+            blank6.setPreferredSize(new Dimension(50, 300));
+            blanc3.setPreferredSize(new Dimension(600, 150));
+            blank7.setPreferredSize(new Dimension(50, 300));
+
+        
         }
         class Handler implements ActionListener{public void actionPerformed(ActionEvent e){}}
     }
