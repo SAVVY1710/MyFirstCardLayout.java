@@ -5,12 +5,6 @@ MyFirstCardLayout.java
 Use CardLayout
  */
 
- import java.awt.BorderLayout;
- import java.awt.CardLayout;
- import javax.swing.JButton;
- import javax.swing.JFrame;
- import javax.swing.JLabel;
- import javax.swing.JPanel;
  import java.awt.*;
  import java.awt.event.ActionEvent;
  import java.awt.event.ActionListener;
@@ -223,13 +217,58 @@ Use CardLayout
              panel4.add(blanc3, BorderLayout.SOUTH);
              panel4.add(blank6, BorderLayout.EAST);
              panel4.add(blank7, BorderLayout.WEST);
+
+              panel.add(panel1, "link1");
+            panel.add(panel2, "link2");
+            panel.add(panel3, "link3");
+            panel.add(panel4, "link4");
+
+            btn1.addActionListener(e -> cardLayout.show(panel, "link1"));
+            btn2.addActionListener(e -> cardLayout.show(panel, "link2"));
+            btn3.addActionListener(e -> cardLayout.show(panel, "link3"));
+            btn4.addActionListener(e -> cardLayout.show(panel, "link4"));
+            next.addActionListener(e -> cardLayout.next(panel));
+            previous.addActionListener(e -> cardLayout.previous(panel));
+            btn11.addActionListener(e -> cardLayout.show(panel, "link1"));
+            btn21.addActionListener(e -> cardLayout.show(panel, "link2"));
+            btn31.addActionListener(e -> cardLayout.show(panel, "link3"));
+            btn41.addActionListener(e -> cardLayout.show(panel, "link4"));
+            next1.addActionListener(e -> cardLayout.next(panel));
+            previous1.addActionListener(e -> cardLayout.previous(panel));
+            btn12.addActionListener(e -> cardLayout.show(panel, "link1"));
+            btn22.addActionListener(e -> cardLayout.show(panel, "link2"));
+            btn32.addActionListener(e -> cardLayout.show(panel, "link3"));
+            btn42.addActionListener(e -> cardLayout.show(panel, "link4"));
+            next2.addActionListener(e -> cardLayout.next(panel));
+            previous2.addActionListener(e -> cardLayout.previous(panel));
+            btn13.addActionListener(e -> cardLayout.show(panel, "link1"));
+            btn23.addActionListener(e -> cardLayout.show(panel, "link2"));
+            btn33.addActionListener(e -> cardLayout.show(panel, "link3"));
+            btn43.addActionListener(e -> cardLayout.show(panel, "link4"));
+            next3.addActionListener(e -> cardLayout.next(panel));
+            previous3.addActionListener(e -> cardLayout.previous(panel));
+            add(panel);
  
          }
          class Handler implements ActionListener
          {
              public void actionPerformed(ActionEvent e)
              {
-                 
+                counter ++;
+                if(counter%2 == 1)
+                {
+                    taxt.setText("My name is Sai!");
+                    taxt2.setText("My name is Sai!");
+                    taxt3.setText("My name is Sai!");
+                    taxt4.setText("My name is Sai!");
+                }
+                else if(counter%2 == 0)
+                {
+                    taxt.setText("");
+                    taxt2.setText("");
+                    taxt3.setText("");
+                    taxt4.setText("");
+                }
              }
          }
      }
